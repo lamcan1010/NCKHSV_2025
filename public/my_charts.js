@@ -144,7 +144,7 @@ function renderMonthChart(year) {
        .attr("text-anchor", "middle")
         .style("font-size", "16px")
         .style("font-weight", "bold")
-        .text(year !== "all"
+        .text(year && year !== "all"
              ? `Phân bố TNGT theo tháng - Năm ${year}`
              : "Phân bố TNGT theo tháng (Tất cả năm)");
 

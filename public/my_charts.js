@@ -294,7 +294,7 @@ function aggregateAgeData(data) {
 // Function to render severity pie chart
 function renderSeverityChart_Pie(year) {
   // Build API URL
-  const apiUrl = getApiUrl('/api/data_severity_by_year');
+  const apiUrl = getApiUrl('https://nckhsv-2025.onrender.com/api/data_severity_by_year');
 
   // Fetch data from API
   fetch(apiUrl)

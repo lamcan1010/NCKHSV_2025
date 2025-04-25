@@ -24,7 +24,7 @@ function updateCharts(year) {
 // Gender-Age correlation chart (100% stacked)
 function renderGenderAgeChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_gender_age_by_year';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_gender_age_by_year';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }

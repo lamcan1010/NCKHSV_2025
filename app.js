@@ -13,6 +13,14 @@ app.get("/", function(request, response) {
   response.render("homePage");
 });
 
+app.get('/info.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'info.html'));
+});
+
+
+
+
+
 var server = require("http").Server(app);
 
 app.post('/', function (req, res) {

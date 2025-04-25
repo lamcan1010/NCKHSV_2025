@@ -299,7 +299,7 @@ function getAgeLabel(key) {
 // Gender-Severity correlation chart (100% stacked)
 function renderGenderSeverityChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_gender_severity';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_gender_severity';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }
@@ -530,7 +530,7 @@ function getSeverityLabel(key) {
 // Gender-Vehicle correlation chart (100% stacked)
 function renderGenderVehChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_gender_veh';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_gender_veh';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }
@@ -766,7 +766,7 @@ function getVehicleLabel(key) {
 // Vehicle-Severity correlation chart (horizontal 100% stacked)
 function renderVehSeverityChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_veh_severity';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_veh_severity';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }
@@ -978,7 +978,7 @@ function getSeverityLabel(key) {
 // Age-Severity correlation chart (horizontal 100% stacked)
 function renderAgeSeverityChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_age_severity';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_age_severity';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }
@@ -1215,7 +1215,7 @@ function getSeverityLabel(key) {
 // Road-Severity correlation chart (horizontal 100% stacked)
 function renderRoadSeverityChart(year) {
   // Xây dựng URL API với tham số năm
-  let apiUrl = 'http://localhost:8000/api/data_road_severity';
+  let apiUrl = 'https://nckhsv-2025.onrender.com/api/data_road_severity';
   if (year && year !== 'all') {
     apiUrl += `?year=${year}`;
   }

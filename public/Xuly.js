@@ -1,4 +1,4 @@
-var socket = io("https://localhost:8000");
+var socket = io("nckhsv-2025.onrender.com");
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 21.027763, lng: 105.834160 },

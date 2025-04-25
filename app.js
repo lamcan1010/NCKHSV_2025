@@ -264,7 +264,7 @@ const query_age_by_year = `
       ELSE '>55' 
     END AS age_name, 
     COUNT(*) AS Accidents 
-  FROM Hanoi_data_TNGT_1517 
+  FROM hanoi_data_tngt_1517 
   WHERE Age IS NOT NULL 
   GROUP BY Year, age_name`;
 
@@ -371,7 +371,7 @@ const query_gender_severity = `
     SUM(CASE WHEN Severity_1 = 'Thương nhẹ' THEN 1 ELSE 0 END) AS Thuong_nhe,
     SUM(CASE WHEN Severity_1 = 'Thương nặng' THEN 1 ELSE 0 END) AS Thuong_nang,
     SUM(CASE WHEN Severity_1 = 'Tử vong' THEN 1 ELSE 0 END) AS Tu_vong
-  FROM Hanoi_data_TNGT_1517
+  FROM hanoi_data_tngt_1517
   WHERE Severity_1 IS NOT NULL AND Gender_1 IS NOT NULL`;
 
 app.get('/api/data_gender_severity', (req, res) => {
@@ -413,7 +413,7 @@ const query_gender_veh = `
     SUM(CASE WHEN Veh_1 = 'Xe buýt, xe khách' THEN 1 ELSE 0 END) AS Xe_buyt,
     SUM(CASE WHEN Veh_1 = 'Xe tải' THEN 1 ELSE 0 END) AS Xe_tai,
     SUM(CASE WHEN Veh_1 = 'Xe khác, chưa rõ' THEN 1 ELSE 0 END) AS Xe_khac
-  FROM Hanoi_data_TNGT_1517
+  FROM hanoi_data_tngt_1517
   WHERE Veh_1 IS NOT NULL AND Gender_1 IS NOT NULL`;
 
 app.get('/api/data_gender_veh', (req, res) => {
@@ -452,7 +452,7 @@ const query_veh_severity = `
     SUM(CASE WHEN Severity_1 = 'Thương nhẹ' THEN 1 ELSE 0 END) AS Thuong_nhe,
     SUM(CASE WHEN Severity_1 = 'Thương nặng' THEN 1 ELSE 0 END) AS Thuong_nang,
     SUM(CASE WHEN Severity_1 = 'Tử vong' THEN 1 ELSE 0 END) AS Tu_vong
-  FROM Hanoi_data_tngt_1517
+  FROM hanoi_data_tngt_1517
   WHERE Severity_1 IS NOT NULL AND Veh_1 IS NOT NULL`;
 
 app.get('/api/data_veh_severity', (req, res) => {
@@ -491,7 +491,7 @@ const query_age_severity = `
     SUM(CASE WHEN Age >=25 AND Age <45 THEN 1 ELSE 0 END) AS T25_45,
     SUM(CASE WHEN Age >=45 AND Age <55 THEN 1 ELSE 0 END) AS T45_55,
     SUM(CASE WHEN Age >=55 THEN 1 ELSE 0 END) AS T_55
-  FROM Hanoi_data_TNGT_1517
+  FROM hanoi_data_tngt_1517
   WHERE Age IS NOT NULL AND Severity_1 IS NOT NULL`;
 
 app.get('/api/data_age_severity', (req, res) => {
@@ -530,7 +530,7 @@ const query_road_severity = `
     SUM(CASE WHEN Severity_1 = 'Thương nhẹ' THEN 1 ELSE 0 END) AS Thuong_nhe,
     SUM(CASE WHEN Severity_1 = 'Thương nặng' THEN 1 ELSE 0 END) AS Thuong_nang,
     SUM(CASE WHEN Severity_1 = 'Tử vong' THEN 1 ELSE 0 END) AS Tu_vong
-  FROM Hanoi_data_TNGT_1517
+  FROM Hanoi_data_tngt_1517
   WHERE Severity_1 IS NOT NULL AND Rdtype IS NOT NULL`;
 
 app.get('/api/data_road_severity', (req, res) => {

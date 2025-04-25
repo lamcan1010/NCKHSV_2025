@@ -42,10 +42,10 @@ function renderMonthChart(year) {
       }
       return response.json();
     })
-    .then(data => {
+    .then(data_month_by_year => {
       // Convert nested object data to array
       let formattedData = [];
-      for (const [yearKey, months] of Object.entries(data)) {
+      for (const [yearKey, months] of Object.entries(data_month_by_year)) {
         for (const [monthKey, accidents] of Object.entries(months)) {
           formattedData.push({
             Year: parseInt(yearKey),

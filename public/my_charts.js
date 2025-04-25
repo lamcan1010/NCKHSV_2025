@@ -138,15 +138,15 @@ function renderMonthChart(year) {
 
 
       // Thêm tiêu đề
-      //g.append("text")
-      //  .attr("x", width / 2)
-      //  .attr("y", -margin.top / 2)
-      //  .attr("text-anchor", "middle")
-      //  .style("font-size", "16px")
-      //  .style("font-weight", "bold")
-      //  .text(year !== "all"
-      //    ? `Phân bố TNGT theo tháng - Năm ${year}`
-      //    : "Phân bố TNGT theo tháng (Tất cả năm)");
+      g.append("text")
+       .attr("x", width / 2)
+       .attr("y", -margin.top / 2)
+       .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("font-weight", "bold")
+        .text(year !== "all"
+             ? `Phân bố TNGT theo tháng - Năm ${year}`
+             : "Phân bố TNGT theo tháng (Tất cả năm)");
 
 
       // Vẽ cột

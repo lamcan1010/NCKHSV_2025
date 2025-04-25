@@ -5,20 +5,13 @@ var d3 = require('d3');
 // Load environment variables at the beginning of the file
 require('dotenv').config();
 
+app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
 app.get("/", function(request, response) {
   response.render("homePage");
 });
-
-app.get('/info.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'info.html'));
-});
-
-app.use(express.static("public"));
-
-
 
 var server = require("http").Server(app);
 

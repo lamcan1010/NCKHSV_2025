@@ -112,7 +112,6 @@ app.get('/api/data_month_by_year', (req, res) => {
       acc[Year][Month] = Accidents;
       return acc;
     }, {});
-
     res.json(formattedData);
   });
 });
@@ -327,7 +326,7 @@ const query_gender_age_by_year = `
     SUM(CASE WHEN Age >=25 AND Age <45 THEN 1 ELSE 0 END) AS T25_45,
     SUM(CASE WHEN Age >=45 AND Age <55 THEN 1 ELSE 0 END) AS T45_55,
     SUM(CASE WHEN Age >=55 THEN 1 ELSE 0 END) AS T_55
-  FROM Hanoi_data_TNGT_1517
+  FROM hanoi_data_tngt_1517
   WHERE Age IS NOT NULL AND Gender_1 IS NOT NULL`;
 
 app.get('/api/data_gender_age_by_year', (req, res) => {
@@ -530,7 +529,7 @@ const query_road_severity = `
     SUM(CASE WHEN Severity_1 = 'Thương nhẹ' THEN 1 ELSE 0 END) AS Thuong_nhe,
     SUM(CASE WHEN Severity_1 = 'Thương nặng' THEN 1 ELSE 0 END) AS Thuong_nang,
     SUM(CASE WHEN Severity_1 = 'Tử vong' THEN 1 ELSE 0 END) AS Tu_vong
-  FROM Hanoi_data_tngt_1517
+  FROM hanoi_data_tngt_1517
   WHERE Severity_1 IS NOT NULL AND Rdtype IS NOT NULL`;
 
 app.get('/api/data_road_severity', (req, res) => {

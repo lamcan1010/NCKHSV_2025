@@ -32,7 +32,7 @@ function updateCharts(year) {
 // Function to render month chart
 function renderMonthChart(year) {
   // Build API URL
-  const apiUrl = getApiUrl('/api/data_month_by_year');
+  const apiUrl = getApiUrl('https://nckhsv-2025.onrender.com/api/data_month_by_year');
 
   // Fetch data from API
   fetch(apiUrl)
